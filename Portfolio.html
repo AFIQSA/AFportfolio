@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Ahamed Fayaz — IT Support Engineer (L1)</title>
+
+    <!-- Tailwind (CDN) -->
+    <script>tailwind={theme:{extend:{}}};</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide icons (CDN) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      :root {
+        /* light design tokens */
+        --background: 0 0% 100%;
+        --foreground: 222.2 47.4% 11.2%;
+        --muted: 210 40% 96.1%;
+        --muted-foreground: 215.4 16.3% 46.9%;
+        --border: 214.3 31.8% 91.4%;
+        --primary: 217.2 91.2% 59.8%;   /* Corporate blue (default) */
+        --primary-foreground: 210 40% 98%;
+      }
+      /* theme accents */
+      body.theme-slate  { --primary: 215 16% 47%; }  /* Slate gray */
+      body.theme-brand  { --primary: 262 83% 58%; }  /* Replace with your brand */
+
+      /* glass card + motion helpers */
+      .glass       { background: hsl(var(--background) / 0.6); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid hsl(var(--border) / 0.45); }
+      .reveal      { opacity: 0; transform: translateY(16px); transition: opacity .5s ease, transform .5s ease; }
+      .reveal.show { opacity: 1; transform: none; }
+      .hover-lift  { transition: transform .25s ease, box-shadow .25s ease; }
+      .hover-lift:hover { transform: translateY(-4px) scale(1.01); }
+    </style>
+  </head>
+
+  <body class="theme-corporate bg-[hsl(var(--background))] text-[hsl(var(--foreground))]">
+    <!-- NAV -->
+    <header class="sticky top-0 z-50 backdrop-blur bg-white/70 border-b border-[hsl(var(--border))]">
+      <nav class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <a href="#home" class="font-semibold tracking-tight text-lg">Ahamed Fayaz</a>
+        <div class="hidden md:flex items-center gap-1">
+          <a href="#about" class="px-3 py-2 rounded-full text-sm hover:bg-[hsl(var(--muted))]">About</a>
+          <a href="#experience" class="px-3 py-2 rounded-full text-sm hover:bg-[hsl(var(--muted))]">Experience</a>
+          <a href="#skills" class="px-3 py-2 rounded-full text-sm hover:bg-[hsl(var(--muted))]">Skills</a>
+          <a href="#certs" class="px-3 py-2 rounded-full text-sm hover:bg-[hsl(var(--muted))]">Certifications</a>
+          <a href="#education" class="px-3 py-2 rounded-full text-sm hover:bg-[hsl(var(--muted))]">Education</a>
+          <a href="#contact" class="px-3 py-2 rounded-full text-sm hover:bg-[hsl(var(--muted))]">Contact</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <!-- Accent theme switches -->
+          <button id="t-corp"  class="hidden md:inline-flex px-3 py-1 rounded-full border text-sm hover:bg-[hsl(var(--muted))]">Corporate</button>
+          <button id="t-slate" class="hidden md:inline-flex px-3 py-1 rounded-full border text-sm hover:bg-[hsl(var(--muted))]">Slate</button>
+          <button id="t-brand" class="hidden md:inline-flex px-3 py-1 rounded-full border text-sm hover:bg-[hsl(var(--muted))]">Brand</button>
+          <!-- External links -->
+          <a href="https://linkedin.com/in/ahamedfayaz25" target="_blank" class="inline-flex items-center gap-2 rounded-full text-sm px-3 py-1.5 bg-[hsl(var(--muted))] hover:opacity-90">
+            <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
+          </a>
+          <a href="#" target="_blank" class="inline-flex items-center gap-2 rounded-full text-sm px-3 py-1.5 bg-[hsl(var(--primary))] text-white hover:opacity-90">
+            <i data-lucide="download" class="w-4 h-4"></i> Resume
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="relative overflow-hidden max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-16 md:py-20">
+      <!-- Animated blobs -->
+      <div class="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-[hsl(var(--primary)/0.1)] blur-3xl animate-pulse"></div>
+      <div class="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-[hsl(var(--muted))] blur-3xl animate-pulse"></div>
+
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div class="reveal">
+          <div class="inline-flex items-center gap-2 rounded-full bg-[hsl(var(--muted))] px-3 py-1 text-xs md:text-sm mb-4">
+            <i data-lucide="shield-check" class="w-4 h-4"></i> Customer-first • Reliable • On-time
+          </div>
+          <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight
+                     bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--primary)/0.7)]
+                     bg-clip-text text-transparent">
+            IT Support Engineer (L1)
+          </h1>
+          <p class="text-[hsl(var(--muted-foreground))] mt-4 text-base md:text-lg">
+            IT Support Engineer with 3+ years of hands-on experience troubleshooting Windows & macOS,
+            user management, MDM-based device support, incident management, and basic networking (VPN/DNS).
+            Customer-first communicator with a track record of reliable, on-time resolutions and stable IT operations.
+          </p>
+          <div class="mt-6 flex flex-wrap items-center gap-3">
+            <a href="#contact" class="inline-flex items-center gap-2 rounded-full text-sm px-3 py-1.5 bg-[hsl(var(--primary))] text-white hover:opacity-90">
+              <i data-lucide="chevron-right" class="w-4 h-4"></i> Get in touch
+            </a>
+            <a href="https://linkedin.com/in/ahamedfayaz25" target="_blank" class="inline-flex items-center gap-2 rounded-full text-sm px-3 py-1.5 border hover:bg-[hsl(var(--muted))]">
+              View LinkedIn <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="glass rounded-2xl p-6 hover-lift reveal">
+            <i data-lucide="server" class="w-6 h-6"></i>
+            <h3 class="font-semibold mt-3">Incident Management</h3>
+            <p class="text-sm text-[hsl(var(--muted-foreground))] mt-2">
+              SLA-focused ticketing via Salesforce ITSM; clear updates & timely escalations.
+            </p>
+          </div>
+          <div class="glass rounded-2xl p-6 hover-lift reveal">
+            <i data-lucide="monitor-smartphone" class="w-6 h-6"></i>
+            <h3 class="font-semibold mt-3">Devices & MDM</h3>
+            <p class="text-sm text-[hsl(var(--muted-foreground))] mt-2">
+              Windows/macOS setup, patching, profile configs, and MDM-based fleet care.
+            </p>
+          </div>
+          <div class="glass rounded-2xl p-6 hover-lift reveal">
+            <i data-lucide="wrench" class="w-6 h-6"></i>
+            <h3 class="font-semibold mt-3">Networking Basics</h3>
+            <p class="text-sm text-[hsl(var(--muted-foreground))] mt-2">
+              Connectivity, VPN, DNS/Route 53, printers & peripherals troubleshooting.
+            </p>
+          </div>
+          <div class="glass rounded-2xl p-6 hover-lift reveal">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+            <h3 class="font-semibold mt-3">Secure by Default</h3>
+            <p class="text-sm text-[hsl(var(--muted-foreground))] mt-2">
+              Least-privilege IAM guidance, OS hardening, AV checks, and patch cadence.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-16">
+      <h2 class="reveal flex items-center gap-3 text-2xl md:text-3xl font-semibold tracking-tight mb-8">
+        <i data-lucide="shield-check" class="w-6 h-6"></i> About
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass rounded-2xl p-6 hover-lift reveal">
+          <h4 class="font-semibold">Location</h4>
+          <p class="text-[hsl(var(--muted-foreground))] mt-1 flex items-center gap-2">
+            <i data-lucide="map-pin" class="w-4 h-4"></i> Chennai, India
+          </p>
+        </div>
+        <div class="glass rounded-2xl p-6 hover-lift reveal">
+          <h4 class="font-semibold">Contact</h4>
+          <div class="mt-2 space-y-2 text-[hsl(var(--muted-foreground))]">
+            <a class="flex items-center gap-2 hover:underline" href="mailto:ahfayaz25@gmail.com">
+              <i data-lucide="mail" class="w-4 h-4"></i> ahfayaz25@gmail.com
+            </a>
+            <a class="flex items-center gap-2 hover:underline" href="tel:+917299929931">
+              <i data-lucide="phone" class="w-4 h-4"></i> +91 72999 29931
+            </a>
+            <a class="flex items-center gap-2 hover:underline" target="_blank" href="https://linkedin.com/in/ahamedfayaz25">
+              <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+        <div class="glass rounded-2xl p-6 hover-lift reveal">
+          <h4 class="font-semibold">Highlights</h4>
+          <ul class="mt-2 text-[hsl(var(--muted-foreground))] text-sm space-y-1">
+            <li>• L1 support across Windows & macOS</li>
+            <li>• Incident/Ticketing with clear RCA notes</li>
+            <li>• Device setup, patching & MDM management</li>
+            <li>• Basic network troubleshooting & VPN</li>
+            <li>• AWS-aware support for cloud-backed apps</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-16">
+      <h2 class="reveal flex items-center gap-3 text-2xl md:text-3xl font-semibold tracking-tight mb-8">
+        <i data-lucide="wrench" class="w-6 h-6"></i> Experience
+      </h2>
+      <div class="space-y-6">
+        <!-- F13 Technologies -->
+        <div class="glass rounded-2xl p-6 hover-lift reveal">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+            <div>
+              <h3 class="text-lg md:text-xl font-semibold">AWS Cloud Intern</h3>
+              <p class="text-[hsl(var(--muted-foreground))] mt-1">F13 Technologies</p>
+            </div>
+            <span class="text-sm text-[hsl(var(--muted-foreground))]">Mar 2025 – Aug 2025 · Remote</span>
+          </div>
+          <ul class="mt-4 space-y-2 list-disc pl-5 text-sm md:text-base">
+            <li>Maintained AWS infra across EC2, S3, EBS & Auto Scaling for availability & performance.</li>
+            <li>Troubleshot VPC, Route 53 & ELB issues (connectivity, DNS, load balancing).</li>
+            <li>Guided users on IAM/Cognito for secure auth & access control.</li>
+            <li>Monitored environments using CloudWatch/CloudTrail and assisted in ops runbooks.</li>
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-2 text-xs">
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">AWS</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">EC2</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">S3</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">ELB</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">VPC</span>
+          </div>
+        </div>
+
+        <!-- Movate -->
+        <div class="glass rounded-2xl p-6 hover-lift reveal">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+            <div>
+              <h3 class="text-lg md:text-xl font-semibold">Technical Support Engineer (L1)</h3>
+              <p class="text-[hsl(var(--muted-foreground))] mt-1">Movate Technology Pvt Ltd</p>
+            </div>
+            <span class="text-sm text-[hsl(var(--muted-foreground))]">Oct 2023 – Feb 2025 · Chennai</span>
+          </div>
+          <ul class="mt-4 space-y-2 list-disc pl-5 text-sm md:text-base">
+            <li>Resolved Windows/macOS issues: hardware, software, printer & performance.</li>
+            <li>Handled user lifecycle: password resets, access provisioning, profile configs.</li>
+            <li>Managed software installs, updates & patching to maintain security.</li>
+            <li>Delivered hands-on macOS setup & MDM device management.</li>
+            <li>Supported basic networking (connectivity, VPN, peripherals).</li>
+            <li>Logged incidents in Salesforce ITSM, ensured SLAs, escalated to L2/L3 as needed.</li>
+            <li>Created knowledge notes to streamline repeated fixes.</li>
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-2 text-xs">
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">Windows</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">macOS</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">MDM</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">VPN</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">Salesforce ITSM</span>
+          </div>
+        </div>
+
+        <!-- SEAXPERT -->
+        <div class="glass rounded-2xl p-6 hover-lift reveal">
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+            <div>
+              <h3 class="text-lg md:text-xl font-semibold">IT Specialist</h3>
+              <p class="text-[hsl(var(--muted-foreground))] mt-1">SEAXPERT LINES LLP</p>
+            </div>
+            <span class="text-sm text-[hsl(var(--muted-foreground))]">Feb 2022 – Aug 2023 · Chennai</span>
+          </div>
+          <ul class="mt-4 space-y-2 list-disc pl-5 text-sm md:text-base">
+            <li>Provided end-user support for desktops/laptops/peripherals & daily ops.</li>
+            <li>Installed & maintained Windows/macOS; handled upgrades & patch management.</li>
+            <li>Administered accounts & access across multiple platforms.</li>
+            <li>Monitored printers, LAN/WAN & VPN connectivity; performed basic network troubleshooting.</li>
+            <li>Hardened systems via updates & AV checks; ensured policy compliance.</li>
+            <li>Documented SOPs & supported infra setup during Dubai expansion.</li>
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-2 text-xs">
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">LAN/WAN</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">VPN</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">Security</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-16">
+      <h2 class="reveal flex items-center gap-3 text-2xl md:text-3xl font-semibold tracking-tight mb-8">
+        <i data-lucide="server" class="w-6 h-6"></i> Skills
+      </h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="glass rounded-2xl p-6 hover-lift reveal">
+          <h4 class="font-semibold">Operating Systems & Cloud</h4>
+          <div class="mt-3 flex flex-wrap gap-2 text-sm">
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">Windows</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">macOS</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">Linux</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">AWS</span>
+          </div>
+        </div>
+        <div class="glass rounded-2xl p-6 hover-lift reveal">
+          <h4 class="font-semibold">AWS</h4>
+          <div class="mt-3 flex flex-wrap gap-2 text-sm">
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">EC2</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">S3</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">IAM</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">CloudWatch</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">CloudTrail</span>
+          </div>
+        </div>
+        <div class="glass rounded-2xl p-6 hover-lift reveal">
+          <h4 class="font-semibold">Tools</h4>
+          <div class="mt-3 flex flex-wrap gap-2 text-sm">
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">Salesforce (ITSM)</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">Git</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">Jenkins</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">Ansible</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">Docker</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">VMware</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">MDM</span>
+          </div>
+        </div>
+        <div class="glass rounded-2xl p-6 hover-lift reveal">
+          <h4 class="font-semibold">Soft Skills</h4>
+          <div class="mt-3 flex flex-wrap gap-2 text-sm">
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">Analytical Troubleshooting</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">Communication</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">Time Management</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">Adaptability</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">Active Listening</span>
+            <span class="inline-flex items-center rounded-full border px-2.5 py-0.5">Team Collaboration</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTS -->
+    <section id="certs" class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-16">
+      <h2 class="reveal flex items-center gap-3 text-2xl md:text-3xl font-semibold tracking-tight mb-8">
+        <i data-lucide="badge-check" class="w-6 h-6"></i> Certifications
+      </h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="glass rounded-2xl p-6 hover-lift reveal">
+          <h4 class="font-semibold">AWS Certified Solutions Architect – Associate</h4>
+          <p class="text-[hsl(var(--muted-foreground))] mt-1">Amazon Web Services</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-16">
+      <h2 class="reveal flex items-center gap-3 text-2xl md:text-3xl font-semibold tracking-tight mb-8">
+        <i data-lucide="graduation-cap" class="w-6 h-6"></i> Education
+      </h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="glass rounded-2xl p-6 hover-lift reveal">
+          <h4 class="font-semibold">B.E. in Computer Science and Engineering</h4>
+          <p class="text-[hsl(var(--muted-foreground))] mt-1">
+            Vel Tech High Tech Dr. Rangarajan & Dr. Sakunthala Engineering College
+          </p>
+          <p class="text-[hsl(var(--muted-foreground))] mt-1 text-sm">Aug 2018 – May 2022 · Chennai</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 py-16">
+      <h2 class="reveal flex items-center gap-3 text-2xl md:text-3xl font-semibold tracking-tight mb-8">
+        <i data-lucide="mail" class="w-6 h-6"></i> Contact
+      </h2>
+      <div class="glass rounded-2xl p-6 hover-lift reveal">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <h3 class="text-xl font-semibold">Let’s work together</h3>
+            <p class="text-[hsl(var(--muted-foreground))] mt-1">Feel free to reach out via email or phone.</p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="mailto:ahfayaz25@gmail.com" class="inline-flex items-center gap-2 rounded-full text-sm px-3 py-1.5 bg-[hsl(var(--primary))] text-white hover:opacity-90">
+              <i data-lucide="mail" class="w-4 h-4"></i> Email Me
+            </a>
+            <a href="tel:+917299929931" class="inline-flex items-center gap-2 rounded-full text-sm px-3 py-1.5 border hover:bg-[hsl(var(--muted))]">
+              <i data-lucide="phone" class="w-4 h-4"></i> Call
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-10 text-center text-sm text-[hsl(var(--muted-foreground))]">
+      © <span id="year"></span> Ahamed Fayaz. All rights reserved.
+    </footer>
+
+    <script>
+      // Activate icons
+      lucide.createIcons();
+
+      // Year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Theme switches
+      const body = document.body;
+      const corp  = document.getElementById('t-corp');
+      const slate = document.getElementById('t-slate');
+      const brand = document.getElementById('t-brand');
+      if (corp && slate && brand) {
+        corp.onclick  = () => { body.classList.remove('theme-slate','theme-brand'); body.classList.add('theme-corporate'); };
+        slate.onclick = () => { body.classList.remove('theme-corporate','theme-brand'); body.classList.add('theme-slate'); };
+        brand.onclick = () => { body.classList.remove('theme-corporate','theme-slate'); body.classList.add('theme-brand'); };
+      }
+
+      // Reveal on scroll
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.2 });
+      document.querySelectorAll('.reveal').forEach((el, i) => {
+        el.style.transitionDelay = (i % 6) * 60 + 'ms'; // lightweight stagger
+        io.observe(el);
+      });
+    </script>
+  </body>
+</html>
